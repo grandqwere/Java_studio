@@ -18,8 +18,8 @@ public class Main {
         People [] mas = new People [] {Andrey,Konst,Sweta};
         List<People> mas2 = Arrays.asList(Andrey,Konst,Sweta);
 
-        //mas[1].setName("Андрей");
-        //System.out.println(mas[1].getName());
+        mas[1].setName("Андрей");
+        System.out.println(mas[1].getName());
 
         mas2.forEach(f -> System.out.println(f.getName()));
 
