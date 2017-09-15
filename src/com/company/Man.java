@@ -3,21 +3,30 @@ package com.company;
 public class Man extends Human{
 
 
-    public void voice () {
-        System.out.println("Я " + ROD + ", мой пол " + sex + ", меня зовут " + name);
+    {
+        sex="мужской";
     }
 
-    public String getName (){
-        return name;
+    public Man(String name){
+        super(name);
+        famil = "";
     }
 
-    public void setName (String newName){
-        name = newName;
-        setSex();
+    Man(String name, String famil){
+        this(name);
+        super.famil = famil;
     }
 
-    void setSex(){
-        sex = "мужской";
+    private setSex(){
+        super.setSex("мужской");
     }
+
+
+
+    //public void setName (String newName){
+    //    name = newName;
+    //}
+
+
 
 }

@@ -2,22 +2,20 @@ package com.company;
 
 public class Woman extends Human{
 
-
-    public void voice () {
-        System.out.println("Я " + ROD + ", мой пол " + sex + ", меня зовут " + name);
+    {
+        sex="женский";
     }
 
-    public String getName (){
-        return name;
+    public Woman (String name){
+        super(name);
+        famil = "";
     }
 
-    public void setName (String newName){
-        name = newName;
-        setSex();
+    public Woman (String name, String famil){
+        this(name);
+        super.famil = famil;
     }
 
-    void setSex(){
-        sex = "женский";
-    }
+
 
 }

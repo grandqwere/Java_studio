@@ -2,21 +2,26 @@ package com.company;
 
 abstract class Human {
 
-    protected final static String ROD = "человек";
-    protected String sex;
-    protected String name;
+    private final static String ROD = "человек";
+    private String sex;
+    private String name, famil;
 
-    //Человек должен говорить
-    abstract void voice ();
+    Human (String name){
+        this.name = name;
+    };
 
-    //выбор пола
     abstract void setSex();
 
-    //Человека нужно назвать
-    abstract void setName (String name);
-
     //У человека можно спросить имя
-    abstract String getName ();
+    public String getName (){
+        return name;
+    }
+
+    //Человек должен говорить
+    public void voice () {
+        System.out.println("Я " + ROD + ", мой пол " + sex + ", меня зовут " + name + " " + famil);
+    }
+
 
     @Override
     public boolean equals(Object o) {
