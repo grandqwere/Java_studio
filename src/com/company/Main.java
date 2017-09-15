@@ -7,26 +7,25 @@ public class Main {
 
     public static void main(String[] args) {
         // write your code here
-        People Andrey = new People();
-        People Konst = new People();
-        People Sweta = new People();
+        Man Andrey = new Man();
+        Man Konst = new Man();
+        Woman Sweta = new Woman();
 
         Andrey.setName("Андрей");
         Konst.setName("Костя");
         Sweta.setName("Света");
 
-        People [] mas = new People [] {Andrey,Konst,Sweta};
-        List<People> mas2 = Arrays.asList(Andrey,Konst,Sweta);
 
-        mas[1].setName("Андрей");
-        System.out.println(mas[1].getName());
+        Human [] mas_human = new Human [] {Andrey,Konst,Sweta};
+        Man [] mas_man = new Man [] {Andrey,Konst};
 
-        mas2.forEach(f -> System.out.println(f.getName()));
 
-        for (People i : mas) {
-            System.out.println(i.getName());
+        for (Human i : mas_human) {
+            i.voice();
         }
 
+
+        //System.out.println(Sweta.equals(Andrey));
 
 
     }
